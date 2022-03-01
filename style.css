@@ -1,0 +1,257 @@
+:root{
+    --height-head : 100px;
+}
+
+body{
+    margin: 0%;
+    background-color: white;
+}
+
+#navHead{
+    height: var(--height-head);
+    background-color: #9d2523;
+    display: block;
+    width: 100%;
+}
+
+/*Left header content*/
+
+#containerLeft{
+    height: inherit;
+    display: flex;
+    width: 60%;
+    float: left;
+    align-items: center;
+}
+
+#LogoHeader{
+    height: var(--height-head);
+    float: 1;
+}
+
+#SearchHeader{
+    margin-left: 20px;
+    float: left;
+    flex: 1;
+    height: 50px;
+    background-color: rgb(0, 0, 0, 0.1);
+    font-size: 20px;
+    border: none;
+    border-radius: 0.5em;
+    padding: 0 0.8em;
+    transition: 0.5s;
+}
+
+    #SearchHeader:focus{
+        background-color: lightgrey;
+        color : #9d2523;
+        border: none;
+        transform:scale(1.05);
+        transform-origin: left;
+        border-radius: 0.75em;
+        margin-left: 30px;
+        padding: 0 0.8em;
+        outline: none;
+    }
+
+/*Right header content*/
+
+#containerRight{
+    align-items: center;
+    vertical-align: middle;
+    overflow: visible;
+    height: var(--height-head);
+    display: flex;
+}
+
+.headLinkBox{
+    float: left;
+    flex: 1;
+    text-align: center;
+    color: lightgrey;
+    transition: 100ms;
+    height: inherit;
+    align-content: center;
+}
+.headLinkBox p{
+    user-select: none;
+    font-size: 25px;
+    height: inherit;
+}
+
+    .headLinkBox:hover{
+        overflow: visible;
+        transform: scale(1.2);
+        background-color: lightgrey;
+        color: #9d2523;
+        border-bottom-left-radius: 0.75em;
+        border-bottom-right-radius: 0.75em;
+    }
+
+.textHeadLink{
+    position: relative;
+    top: 35%;
+    margin: 0%;
+}
+
+/* data display */
+
+.dividDisplay{
+    margin-left: 10vh;
+    margin-right: 10vh;
+    margin-top: 10vh;
+    border-radius: 0.75em;
+    border: 5px solid #9d2523;
+}
+
+#topDisplay{
+    font-size: 7vh;
+    margin: 0;
+    margin-top: 10vh;
+    text-align: center;
+    position: relative;
+    left: 50%;    
+    transform: translate(-50%);
+}
+
+#dataDisplay{
+    border-radius: 0.75em;
+    width: 180vh;
+    background-color: lightgrey;
+    margin: 0;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 6vh;
+}
+
+.dataBox{
+    border-radius: 0.75em;
+    height:37vh;
+    width: 37vh;
+    float:none;
+    flex: 1/4 1 20%;
+    color: lightgrey;
+    background-color: #9d2523;
+    text-align: center;
+}
+
+.dataBoxHover{
+    transition: 0.25s;
+}
+
+.dataBoxHover:hover{
+    transform: scale(1.1);
+
+}
+
+.imgBox{
+    width: inherit;
+}
+
+
+/* slide show */
+
+.slideImg{
+    display: none;
+}
+
+.active{
+    display: block;
+    width: 100vh;
+    height: 50vh;
+}
+
+.active p{
+    height: max-content;
+}
+
+.active img{
+    height:calc(50vh - 10%);
+}
+
+/* les bouton de merde */
+
+.prev, .next {
+    background-color: rgba(0,0,0,0.2);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+    .prev:hover, .next:hover{
+        background-color: rgba(0,0,0,0.5);
+        transform: scale(1.2);
+    }
+
+        .prev:hover{
+            transform-origin: left;
+        }
+        .next:hover{
+            transform-origin: right;
+        }
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+/* data slide show */
+#dataSlide{
+    border-radius: 0.75em;
+    width: max-content;
+    background-color: lightgrey;
+    margin: 0;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    gap: 6vh;
+
+}
+
+#dataSlide .dataBox{
+    width: 80vh;
+    height: max-content;
+    background-color: #9d2523;
+    margin: 0%;
+    padding: 0%;
+}
+
+#dataSlide .dataTitle{
+    font-size: 4vh;
+}
+
+.captionSlide{
+    font-size: 5vh;
+    margin: 0%;
+    margin-bottom: 10px;
+}
+
+.top{
+    font-size: 7vh;
+    margin: 0;
+    margin-top: 10vh;
+    text-align: center;
+    position: relative;
+    left: 50%;    
+    transform: translate(-50%);
+}
