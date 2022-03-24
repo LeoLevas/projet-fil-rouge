@@ -3,6 +3,7 @@ window.addEventListener('load', function()  {
     var searchBar = this.document.getElementById("SearchHeader")
     var dataDisplay = this.document.getElementById("dataDisplay")
     var dataSlide = this.document.getElementById("dataSlide")
+    
 
     var linkBoxes = this.document.getElementsByClassName("headLinkBox")
 
@@ -121,7 +122,53 @@ window.addEventListener('load', function()  {
     }
     precedent.addEventListener('click', slidePrecedente)
     //#endregion
+
+
 })
+
+function formOn() {
+    document.getElementById("formOverlay").style.display = "block";
+    document.getElementById("formDisplay").style.display = "block";
+
+    elForm = document.getElementById("formDisplay");
+
+    const logInDisplay = document.getElementById("logInId");
+
+    const blockInput = logInDisplay.querySelectorAll(".logIn.block-cube.block-input");
+
+    console.log(blockInput.length + "blockInput");
+    for (x = 0; x < blockInput.length; x++){
+        console.log(x);
+        const logInInput = blockInput[x].querySelector("input");
+        const bgTop = blockInput[x].querySelector(".bg-top");
+        const bgRight = blockInput[x].querySelector(".bg-right");
+        logInInput.addEventListener('focus', (event)=>{
+            bgTop.style.scale = "1";
+            bgRight.style.scale = "1";
+        });
+        logInInput.addEventListener('blur', (event) => {
+            bgRight.style.scale = "0";
+            bgTop.style.scale = "0";
+        })        
+        
+        logInInput.addEventListener('mouseover', (event)=>{
+             bgTop.style.scale = "1";
+             bgRight.style.scale = "1";
+        });        
+        logInInput.addEventListener('mouseout', (event)=>{
+            if (logInInput !== document.activeElement){
+                bgTop.style.scale = "0";
+                bgRight.style.scale = "0";
+            }
+       });
+    };
+
+}
+  
+function formOff() {
+    document.getElementById("formOverlay").style.display = "none";
+    document.getElementById("formDisplay").style.display = "none";
+}
 
 
 //

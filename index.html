@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,14 @@
     <title>Index</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
 
-    <script src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </head>
+
 <body>
 
-    <!-- header avec logo + search bar + accueil + inscription + espace élève -->
+    <!-- #region  header-->
     <nav id="navHead">
         <div id="containerLeft">
             <img id="LogoHeader" src="resource/logo.jpg" alt="Logo not found">
@@ -25,18 +28,20 @@
                 </p>
             </div>
             <div class="headLinkBox">
-                <p class="textHeadLink">                   
+                <p class="textHeadLink" onclick="formOn()">
                     Inscription
                 </p>
             </div>
-            <div class="headLinkBox">
+            <div class="headLinkBox" id="EspaceEleve">
                 <p class="textHeadLink">
                     Espace élève
                 </p>
             </div>
         </div>
     </nav>
+    <!-- #endregion -->
 
+    <!-- #region slideshow & data display -->
     <!-- data slideshow -->
 
     <div class="top">
@@ -61,6 +66,87 @@
     </div>
 
     <div id="dataDisplay"></div>
+    <!-- #endregion -->
+
+    <!-- #region footer -->
+    <footer>
+        <div id="footerContainer">
+            <dib class="footerBox">
+                <p>Accueil</p>
+            </dib>
+            <dib class="footerBox">
+                <p>Qui sommes nous</p>
+            </dib>
+            <dib class="footerBox">
+                <p>Nous trouver</p>
+            </dib>
+            <dib class="footerBox">
+                <p>Mailing List</p>
+            </dib>
+            <dib class="footerBox">
+                <p>Mention légales</p>
+            </dib>
+            <dib class="footerBox">
+                <p>CGU</p>
+            </dib>
+        </div>
+    </footer>
+    <!-- #endregion -->
+
+    <div id="formOverlay">
+        <button id="closeButton" onclick="formOff()">close</button>
+        <div id="formDisplay">
+            <div id="ContainerLogRegister">
+                <div class="formOption">
+                    <a>
+                        Log In
+                    </a>
+                </div>
+                <div class="formOption">
+                    <a>
+                        Register        
+                    </a>
+                </div>
+            </div>
+            <div id="formContainer">
+                <form autocomplete="off">
+                    <div class="logIn" id="logInId">
+                        <div class="logIn block-cube block-input">
+                            <input class="logInInput" name="username" placeholder="Username" type="text">
+                            <div class="bg-top"></div>
+                            <div class="bg-right"></div>
+                            <div class="bg">
+                                <div class="bg-inner"></div>
+                            </div>
+                        </div>
+                        <div class="logIn block-cube block-input">
+                            <input name="password" placeholder="Password" type="password">
+                            <div class="bg-top">
+                            </div>
+                            <div class="bg-right">
+                            </div>
+                            <div class="bg">
+                                <div class="bg-inner"></div>
+                            </div>
+                        </div>
+                        <button class="btn block-cube block-cube-hover" onclick="formOff()" type="button">
+                            <div class="bg-top"></div>
+                            <div class="bg-right"></div>
+                            <div class="bg">
+                                <div class="bg-inner"></div>
+                            </div>
+                            <div class="text">
+                                Log In
+                            </div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
     
 </body>
+
 </html>
